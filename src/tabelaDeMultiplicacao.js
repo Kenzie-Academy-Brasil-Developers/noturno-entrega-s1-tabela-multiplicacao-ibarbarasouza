@@ -1,9 +1,15 @@
-function nomeDaFuncao() { 
-    // Substitua "nomeDaSuaFuncao" por um nome mais apropriado
-    // TODO: escrever dois loops aninhados para desenhar o array bidimensional e monstar o restante da tabela no console.
-    let x = [];
-    for (let i = 0; i <= 10; i++) {
-        x[i] = [];
+
+function tabelaMult(n) { // Substitua "nomeDaSuaFuncao" por um nome mais apropriado
+    // todo: escrever dois loops aninhados para desenhar o array bidimensional e monstar o restante da tabela no console.
+    let arrayTabela = [];
+
+    for (let contador = 0; contador <= n; contador++) {
+        arrayTabela [contador] = [contador * n];
+        for (let subContador = 0; subContador<= n; subContador++){
+        arrayTabela [contador] [subContador] = [subContador * contador];
+        }
     }
-    console.table(x)
+    return arrayTabela;
 }
+
+console.table(tabelaMult(9))
